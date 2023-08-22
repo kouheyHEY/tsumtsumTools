@@ -1,0 +1,8 @@
+.block-flex {
+    display: flex;
+
+    .score-input,
+    .score-output {
+        margin: 5px;
+    }
+}
