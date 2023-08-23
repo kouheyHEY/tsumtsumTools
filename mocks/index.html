@@ -7,36 +7,62 @@
 
     <script src="js/01_scoreSimulator.js"></script>
 
+    <link rel="stylesheet" href="./css/00_common.css">
     <link rel="stylesheet" href="./css/01_scoreSimulator.css">
 </head>
 <body>
     <header>
-        <h1>スコアシミュレータ</h1>
+        <h1 class="header-title">スコアシミュレータ</h1>
     </header>
 
     <main>
-        <div class="block-flex">
+        <div class="block-flex content-block main-block">
 
-            <div class="score-output">
-                <div class="header-label">
-                    予想スコア
-                </div>
-                <div id="score-output">
-                    1842000
+            <!-- 出力ブロック -->
+            <div class="block-output content-block">
+
+                <!-- 出力（スコア） -->
+                <div class="info-item">
+                    <div class="header-label">
+                        予想スコア
+                    </div>
+                    <div id="score-output">
+                        1842000
+                    </div>
                 </div>
             </div>
-            <div class="score-input">
-                <div class="header-label">
-                    入力（スコア）
+
+            <!-- 入力ブロック -->
+            <div class="block-input content-block">
+                
+                <!-- 入力（スコア） -->
+                <div class="info-item">
+                    <div class="header-label">
+                        元スコア
+                    </div>
+                    <div id="score-input">
+                        <input type="number" name="score-input" id="score-input">
+                    </div>
                 </div>
-                <div id="score-input">
-                    <input type="number" name="score-input" id="score-input">
+
+                <!-- 入力（レベル） -->
+                <div class="info-item">
+                    <div class="header-label">
+                        レベル
+                    </div>
+                    <div id="level-input">
+                        <input type="number" name="level-input" id="level-input">
+                    </div>
                 </div>
-                <div class="header-label">
-                    入力（レベル）
-                </div>
-                <div id="level-input">
-                    <input type="number" name="level-input" id="level-input">
+
+                <!-- 入力（プラススコア有無） -->
+                <div class="info-item">
+                    <div class="header-label">
+                        「+Score」アイテム
+                    </div>
+                    <div id="plus-score-input">
+                        <input type="checkbox" name="plus-score-input" id="plus-score-input">
+                    </div>
                 </div>
             </div>
         </div>

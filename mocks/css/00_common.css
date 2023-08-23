@@ -1,0 +1,30 @@
+.header-title {
+    text-align: center;
+}
+
+.main-block {
+    margin: 0 auto;
+    width: 95%;
+    max-width: 960px;
+}
+
+.block-flex {
+    margin: 5px auto;
+    display: flex;
+}
+
+.content-block {
+    padding: 5px;
+    border: 2px #113311 dashed;
+}
+
+.info-item {
+    margin: 5px;
+}
+
+@media (max-width: 768px) {
+    .block-flex {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
