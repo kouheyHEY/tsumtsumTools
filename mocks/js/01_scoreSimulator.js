@@ -60,13 +60,13 @@ function calcLevelBonus() {
         inc = 0.1 * (level - 40);
     } else if (level <= 175) {
         baseValue = 25;
-        inc = 0.1 * Math.floor((level - 150) / 5);
+        inc = 0.1 * Math.ceil((level - 150) / 5);
     } else if (level <= 225) {
         baseValue = 25.5;
-        inc = 0.1 * Math.floor((level - 175) / 10);
+        inc = 0.1 * Math.ceil((level - 175) / 10);
     } else {
         baseValue = 26;
-        inc = 0.1 * Math.floor((level - 225) / 15);
+        inc = 0.1 * Math.ceil((level - 225) / 15);
     }
 
     bonusRate = baseValue + inc;
