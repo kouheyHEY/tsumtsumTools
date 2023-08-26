@@ -1,0 +1,21 @@
+.block-input,
+.block-output {
+    margin: 5px;
+
+    width: 50%;
+    min-width: 240px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media screen and (max-width:768px) {
+
+    .block-input,
+    .block-output {
+        width: calc(100% - 10px);
+    }
+}

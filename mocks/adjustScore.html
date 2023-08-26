@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TsumTsumTools</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="js/02_scoreAdjustTool.js"></script>
+
+    <link rel="stylesheet" href="./css/00_common.css">
+    <link rel="stylesheet" href="./css/02_scoreAdjustTool.css">
+</head>
+<body>
+    <header>
+        <h1 class="header-title">スコアアジャストツール</h1>
+    </header>
+
+    <main>
+        <div class="block-flex content-block main-block">
+
+            <!-- 出力ブロック -->
+            <div class="block-output content-block">
+
+                <!-- 出力（スコア） -->
+                <div class="info-item">
+                    <div class="header-label">
+                        予想スコア
+                    </div>
+                    <div id="score-output">
+                        0
+                    </div>
+                </div>
+
+                <!-- 入力情報（レベルボーナス） -->
+                <div class="info-item">
+                    <div class="header-label">
+                        レベルボーナス
+                    </div>
+                    <div id="level-bonus-output">
+                        0%
+                    </div>
+                </div>
+                
+                <!-- 入力情報（スコア加算ボーナス） -->
+                <div class="info-item">
+                    <div class="header-label">
+                        スコア加算アイテムボーナス
+                    </div>
+                    <div id="plus-score-output">
+                        0%
+                    </div>
+                </div>
+            </div>
+
+            <!-- 入力ブロック -->
+            <div class="block-input content-block">
+                
+                <!-- 入力（スコア） -->
+                <div class="info-item">
+                    <div class="header-label">
+                        元スコア
+                    </div>
+                    <div class="score-input">
+                        <input type="number" name="score-input" id="score-input" value="0">
+                    </div>
+                </div>
+
+                <!-- 入力（レベル） -->
+                <div class="info-item">
+                    <div class="header-label">
+                        レベル
+                    </div>
+                    <div class="level-input">
+                        <input type="number" name="level-input" id="level-input" value="0">
+                    </div>
+                </div>
+
+                <!-- 入力（プラススコア有無） -->
+                <div class="info-item">
+                    <div class="header-label">
+                        「+Score」アイテム
+                    </div>
+                    <div class="plus-score-input">
+                        <input type="checkbox" name="plus-score-input" id="plus-score-input">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+</body>
+</html>
