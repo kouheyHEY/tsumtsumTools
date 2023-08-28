@@ -1,3 +1,56 @@
+input[type="number"] {
+    background: none;
+    border: 2px #113311 solid;
+    border-radius: 0;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    background-color: #ccffcc;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+}
+
+/* チェックボックスのデザインCSS */
+/* 
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]+label {
+    display: block;
+    float: left;
+    text-align: center;
+
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 5px;
+
+    cursor: pointer;
+    color: #113311;
+    border: 2px solid #113311;
+    border-radius: 0;
+}
+
+input[type="checkbox"]:checked+label {
+    color: #ffffff;
+    background-color: #113311;
+}
+ */
+
+
+
 .header-title {
     text-align: center;
 }
@@ -20,6 +73,7 @@
 
 .info-item {
     margin: 5px;
+    font-weight: 600;
 }
 
 @media (max-width: 768px) {
