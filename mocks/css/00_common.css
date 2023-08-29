@@ -1,9 +1,10 @@
 *{
     /* フォント指定 */
-    font-family: "sans-serif";
+    font-family: sans-serif;
 }
 
-
+/* 入力フォーム（number） */
+/* デザイン変更 */
 input[type="number"] {
     background: none;
     border: 2px #113311 solid;
@@ -22,6 +23,7 @@ input[type="number"]:focus {
     background-color: #ccffcc;
 }
 
+/* 数値の調整用ボタンの非表示 */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none !important;
@@ -56,11 +58,12 @@ input[type="checkbox"]:checked+label {
  */
 
 
-
+/* タイトル */
 .header-title {
     text-align: center;
 }
 
+/* メインコンテンツ */
 .main-block {
     margin: 0 auto;
     width: 95%;
@@ -72,6 +75,7 @@ input[type="checkbox"]:checked+label {
     display: flex;
 }
 
+/* 小分けのコンテンツブロック */
 .content-block {
     padding: 5px;
     border: 2px #113311 dashed;
@@ -82,7 +86,9 @@ input[type="checkbox"]:checked+label {
     font-weight: 600;
 }
 
+/* メディアクエリ（スマートフォン用）*/
 @media (max-width: 768px) {
+    /* 縦並び用 */
     .block-flex {
         flex-wrap: wrap;
         flex-direction: column;
