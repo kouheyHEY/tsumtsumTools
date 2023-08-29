@@ -40,6 +40,8 @@ input[type=checkbox] {
     transform: rotate(45deg);
 
     opacity: 0;
+
+    z-index: 1;
 }
 
 /* チェック時 */
@@ -48,10 +50,8 @@ input[type=checkbox]:checked+#label-plus:before {
 }
 
 /* マウスホバー時 */
-input[type=checkbox]:hover+#label-plus:before {
-    opacity: 1;
-    border-right: 3px solid #66bb66;
-    border-bottom: 3px solid #66bb66;
+input[type=checkbox]:hover+#label-plus:after {
+    background-color: #ccffcc;
 }
 
 
