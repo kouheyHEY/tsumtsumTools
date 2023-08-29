@@ -1,106 +1,71 @@
-// 元スコア
-var scoreInput = 0;
-var finalScore = 0;
-// レベル
-var levelInput = 0;
-var levelBonus = 0;
-// スコア加算有無
-var isPlusScore = 0;
-var plusScoreBonus = 0;
+// 現在のコイン
+var myCoinInput = 0;
+// 目標コイン
+var targetCoinInput = 0;
+// 残りコイン
+var adjustCoin = 0;
+// 許容チェーン
+var chainLimInput = 0;
 
 /**
  * 入力スコアから予想スコアを計算する
  */
-function calcScore() {
-    finalScore =
-        scoreInput +
-        Math.floor(scoreInput * (levelBonus / 100)) +
-        Math.floor(scoreInput * (plusScoreBonus / 100))
-        ;
-    $('#score-output').text(finalScore.toLocaleString());
+function calcChain() {
+    $('#coin-output').text(adjustCoin.toLocaleString());
+}
+
+
+/** 
+ * 残りコイン枚数を計算する
+ */
+function calcAdjustCoin() {
+    adjustCoin = targetCoinInput - myCoinInput;
 }
 
 /**
- * 元スコアを取得する
+ * 現在コインを取得する
  */
-function getScoreInput() {
-    scoreInput = Number($('#score-input').val());
+function getMyCoinInput() {
+    myCoinInput = Number($('#my-coin-input').val());
 
-    calcScore();
+    calcAdjustCoin();
+    calcChain();
 
 }
-$(document).on("keyup", '#score-input', getScoreInput);
+$(document).on("keyup", '#my-coin-input', getMyCoinInput);
 
 /**
- * レベルボーナスを計算する
+ * 目標コインを取得する
  */
-function getLevelInput() {
-    levelInput = Number($('#level-input').val());
-    levelBonus = calcLevelBonus();
+function getTargetCoinInput() {
+    targetCoinInput = Number($('#target-coin-input').val());
 
-    $('#level-bonus-output').text(levelBonus + '%');
-
-    calcScore();
+    calcAdjustCoin();
+    calcChain();
 
 }
-$(document).on("keyup", '#level-input', getLevelInput);
-
+$(document).on("keyup", '#target-coin-input', getTargetCoinInput);
 
 /**
- * スコア加算アイテムの有無を取得する
+ * 許容チェーンを取得する
  */
-function getPlusScore() {
-    isPlusScore = $('#plus-score-input').prop("checked");
-    plusScoreBonus = (isPlusScore) ? 10 : 0;
+function getChainLimInput() {
+    chainLimInput = Number($('#chain-lim-input').val());
 
-    $('#plus-score-output').text(plusScoreBonus + '%');
+    calcChain();
 
-    calcScore();
 }
-$(function ($) {
-    $('#plus-score-input').change(getPlusScore);
-});
+$(document).on("keyup", '#chain-lim-input', getChainLimInput);
+
+
 
 /**
- * レベルからレベルボーナスを計算する
+ * 残りコイン枚数と許容チェーンから、チェーンの組み合わせを計算する
  */
-function calcLevelBonus() {
-    // ボーナス率
-    let bonusRate = 0;
-    // ボーナス基準値
-    let baseValue = 0;
-    // ボーナス増加値
-    let inc = 0;
-    // 現在のレベル
+function calcChainComb() {
+    let chainCombList = [];
 
-    // レベル別のボーナス率計算
-    if (levelInput <= 10) {
-        baseValue = 0;
-        inc = 0.5 * (levelInput - 0);
-    } else if (levelInput <= 20) {
-        baseValue = 5;
-        inc = 0.4 * (levelInput - 10);
-    } else if (levelInput <= 30) {
-        baseValue = 9;
-        inc = 0.3 * (levelInput - 20);
-    } else if (levelInput <= 40) {
-        baseValue = 12;
-        inc = 0.2 * (levelInput - 30);
-    } else if (levelInput <= 150) {
-        baseValue = 14;
-        inc = 0.1 * (levelInput - 40);
-    } else if (levelInput <= 175) {
-        baseValue = 25;
-        inc = 0.1 * Math.ceil((levelInput - 150) / 5);
-    } else if (levelInput <= 225) {
-        baseValue = 25.5;
-        inc = 0.1 * Math.ceil((levelInput - 175) / 10);
-    } else {
-        baseValue = 26;
-        inc = 0.1 * Math.ceil((levelInput - 225) / 15);
-    }
 
-    bonusRate = baseValue + inc;
-    return bonusRate;
+    return chainCombList;
 
 }

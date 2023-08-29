@@ -1,14 +1,13 @@
-/* チェックボックスの設定CSS */
 input[type=checkbox] {
     display: none;
 }
 
-/* チェックボックスのラベル */
 #label-plus {
     position: relative;
     padding: 0;
     padding: 16px;
 }
+
 
 #label-plus:after,
 #label-plus:before {
@@ -18,7 +17,6 @@ input[type=checkbox] {
     top: 50%;
 }
 
-/* チェックボックスの枠線 */
 #label-plus:after {
     margin-top: -10px;
     width: 15px;
@@ -27,31 +25,32 @@ input[type=checkbox] {
     border-radius: 0;
 }
 
-/* チェックマーク */
 #label-plus:before {
     left: 5.5px;
     margin-top: -8px;
     width: 5px;
+    /* ボックスの横幅を指定する */
     height: 9px;
-
+    /* ボックスの高さを指定する */
     border-right: 3px solid #113311;
+    /* 境界線（右）のスタイルを指定する */
     border-bottom: 3px solid #113311;
-
+    /* 境界線（下）のスタイルを指定する */
     transform: rotate(45deg);
-
+    /* 要素を回転させる */
     opacity: 0;
-
-    z-index: 1;
+    /* 要素を透過指定する */
 }
 
-/* チェック時 */
 input[type=checkbox]:checked+#label-plus:before {
     opacity: 1;
 }
 
-/* マウスホバー時 */
-input[type=checkbox]:hover+#label-plus:after {
-    background-color: #ccffcc;
+
+input[type=checkbox]:hover+#label-plus:before {
+    opacity: 1;
+    border-right: 3px solid #66bb66;
+    border-bottom: 3px solid #66bb66;
 }
 
 

@@ -12,10 +12,20 @@
     justify-content: space-between;
 }
 
+.block-output {
+    justify-content: start;
+}
+
 @media screen and (max-width:768px) {
 
     .block-input,
     .block-output {
         width: calc(100% - 10px);
+    }
+
+    /* 縦並び用 */
+    .block-flex {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
     }
 }
