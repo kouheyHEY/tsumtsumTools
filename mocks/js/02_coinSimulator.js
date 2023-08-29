@@ -17,7 +17,7 @@ function calcScore() {
         Math.floor(scoreInput * (levelBonus / 100)) +
         Math.floor(scoreInput * (plusScoreBonus / 100))
         ;
-    $('#score-output').text(finalScore);
+    $('#score-output').text(finalScore.toLocaleString());
 }
 
 /**
