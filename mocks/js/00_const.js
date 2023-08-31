@@ -1,5 +1,5 @@
 // 4チェーンから45チェーンまでの獲得コイン
-var COIN_LIST_CHAIN = [
+const COIN_LIST_CHAIN = [
     0,
     0,
     0,
@@ -46,3 +46,16 @@ var COIN_LIST_CHAIN = [
     366,
     378
 ];
+
+// 最低チェーン数
+const CHAIN_MIN = 4;
+// 最高チェーン数
+const CHAIN_MAX = 45;
+// 許容チェーン数上限
+const CHAIN_LIM = 18;
+
+// チェーンの組み合わせを計算する最高コイン数
+const MAX_COIN_FOR_CALC_COMBI = 30;
+
+// チェーンの組み合わせ数の上限
+const MAX_CHAIN_COMBI = 30;

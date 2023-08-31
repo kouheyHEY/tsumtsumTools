@@ -1,6 +1,10 @@
-*{
+* {
     /* フォント指定 */
     font-family: sans-serif;
+}
+
+.header-title {
+    margin: 10px;
 }
 
 /* 入力フォーム（number） */
@@ -88,6 +92,7 @@ input[type="checkbox"]:checked+label {
 
 /* メディアクエリ（スマートフォン用）*/
 @media (max-width: 768px) {
+
     /* 縦並び用 */
     .block-flex {
         flex-wrap: wrap;
