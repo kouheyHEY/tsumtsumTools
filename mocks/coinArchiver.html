@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TsumTsumTools | CoinSimulator</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="js/00_const.js"></script>
+    <script src="js/02_coinSimulator.js"></script>
+
+    <link rel="stylesheet" href="./css/00_common.css">
+    <link rel="stylesheet" href="./css/03_coinArchiver.css">
+</head>
+<body>
+    <header>
+        <h1 class="header-title">コインアーカイブ</h1>
+    </header>
+
+    <main>
+        <div class="block-flex content-block main-block">
+
+            <!-- 出力ブロック -->
+            <div class="block-output content-block">
+
+                <!-- 出力（コイン） -->
+                <div class="info-item">
+                    <div class="header-label">
+                        残りコイン枚数
+                    </div>
+                    <div id="coin-output">
+                        0
+                    </div>
+                </div>
+
+                <!-- 出力（必要チェーン） -->
+                <div class="info-item">
+                    <div class="header-label">
+                        必要チェーン
+                    </div>
+                    <div id="chain-comb-output">
+                        組み合わせなし
+                    </div>
+                </div>
+            </div>
+
+            <!-- 入力ブロック -->
+            <div class="block-input content-block">
+                
+                <!-- 入力（現コイン） -->
+                <div class="info-item">
+                    <div class="header-label">
+                        現在のコイン枚数
+                    </div>
+                    <div class="my-coin-input">
+                        <input type="number" name="my-coin-input" id="my-coin-input" value="0">
+                    </div>
+                </div>
+
+                <!-- 入力（目標コイン） -->
+                <div class="info-item">
+                    <div class="header-label">
+                        目標コイン枚数
+                    </div>
+                    <div class="target-coin-input">
+                        <input type="number" name="target-coin-input" id="target-coin-input" value="0">
+                    </div>
+                </div>
+
+                <!-- 入力（許容チェーン数上限） -->
+                <div class="info-item">
+                    <div class="header-label">
+                        許容チェーン数
+                    </div>
+                    <div class="chain-lim-input">
+                        <input type="number" name="chain-lim-input" id="chain-lim-input" value="45">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+</body>
+</html>

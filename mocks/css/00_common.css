@@ -96,6 +96,6 @@ input[type="checkbox"]:checked+label {
     /* 縦並び用 */
     .block-flex {
         flex-wrap: wrap;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 }
